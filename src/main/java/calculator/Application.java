@@ -18,6 +18,14 @@ public class Application {
         if (input == null || input.isEmpty()) {
             return 0;
         }
+    String delimiter = ",|:";  // 기본 구분자
+
+    // 이후 코드는 다음 커밋에서 추가
+    String[] tokens = input.split(delimiter);
+    int sum = 0;
+    for (String token : tokens) {
         // 이후 코드는 다음 커밋에서 추가
+    }
+    return sum;
     }
 }
