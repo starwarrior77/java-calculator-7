@@ -38,7 +38,11 @@ public class Application {
         String[] tokens = input.split(delimiter);
         int sum = 0;
         for (String token : tokens) {
-            // 이후 코드는 다음 커밋에서 추가
+            int num = parseInt(token);//숫자X 입력값은 다음 코드에서 커밋에서 추가
+            if (num < 0) {
+                throw new IllegalArgumentException("음수는 입력할 수 없습니다.");
+            }
+            sum += num;
         }
         return sum;
     }
