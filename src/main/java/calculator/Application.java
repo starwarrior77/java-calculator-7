@@ -35,15 +35,24 @@ public class Application {
             }
         }
 
+        // 구분자를 기준으로 문자열을 분리하고 숫자로 변환
         String[] tokens = input.split(delimiter);
         int sum = 0;
         for (String token : tokens) {
-            int num = parseInt(token);//숫자X 입력값은 다음 코드에서 커밋에서 추가
+            int num = parseInt(token);
             if (num < 0) {
                 throw new IllegalArgumentException("음수는 입력할 수 없습니다.");
             }
             sum += num;
         }
         return sum;
+    }
+
+    private static int parseInt(String str) {
+        try {
+            return Integer.parseInt(str);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("잘못된 입력입니다.");
+        }
     }
 }
