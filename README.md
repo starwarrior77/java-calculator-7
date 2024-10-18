@@ -1,1 +1,8 @@
-# java-calculator-precourse
+## 우아한테크코스 프리코스 1주차 문자열 덧셈 계산기
+
+## 기능 목록
+1. 빈 문자열 또는 null 입력에 대한 처리 (결과는 0)
+2. 쉼표(,) 또는 콜론(:)을 구분자로 사용하여 숫자 합산
+3. 커스텀 구분자 지원 ("//[구분자]\n" 형태로 구분자 지정)
+4. 음수 입력 시 예외 처리 (IllegalArgumentException 발생)
+5. 숫자가 아닌 입력값에 대한 예외 처리 (IllegalArgumentException 발생)
